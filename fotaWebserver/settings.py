@@ -130,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-CSRF_TRUSTED_ORIGINS=['https://fotaserver.azurewebsites.net/']
+CSRF_TRUSTED_ORIGINS=['http://fotaserver.azurewebsites.net/']
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
