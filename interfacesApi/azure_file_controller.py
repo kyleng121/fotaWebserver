@@ -70,7 +70,7 @@ def upload_file_to_blob(file):
     print("pass check file")
     file_prefix = uuid.uuid4().hex
     ext = Path(file.name).suffix
-    file_name = f"{file_prefix}{ext}"
+    file_name = f"{ext}"
     file_content = file.read()
     file_io = BytesIO(file_content)
     upload_to_blob_storage(file_io,file_name)
