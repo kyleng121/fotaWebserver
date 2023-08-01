@@ -68,9 +68,9 @@ def upload_file_to_blob(file):
     if not check_file_ext(file.name):
         return
     print("pass check file")
-    file_prefix = uuid.uuid4().hex
+    file_prefix = str(file.name)
     ext = Path(file.name).suffix
-    file_name = f"{ext}"
+    file_name = f"{}{ext}"
     file_content = file.read()
     file_io = BytesIO(file_content)
     upload_to_blob_storage(file_io,file_name)
