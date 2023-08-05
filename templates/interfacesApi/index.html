@@ -58,7 +58,7 @@ $('#send_diag_btn').on('click',function(){
         'diag_service' : textInput,
         'csrfmiddlewaretoken':crsfToken,
     }
-    console.log(data)
+  
     $.ajax({
         type: 'POST',
         url:'get_diag_messages',
