@@ -1,5 +1,4 @@
 import json
-from azure.iot.device import IoTHubDeviceClient
 import sys
 from azure.iot.hub import IoTHubRegistryManager
 
