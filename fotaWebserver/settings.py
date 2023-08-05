@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'fotaWebserver.custom_middleware.CrossOriginOpenerPolicyMiddleware',
+    'interfacesApi.custom_middleware.CrossOriginOpenerPolicyMiddleware',
 ]
 
 ROOT_URLCONF = 'fotaWebserver.urls'
