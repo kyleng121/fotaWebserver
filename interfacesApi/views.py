@@ -59,11 +59,14 @@ def delete_file(request,file_id):
 
 def get_diag_messages(request):
     print("trigger")
-    if request.method == 'POST: 
+    if request.method == 'POST': 
+        print("step in Post")
         diag_messages_input = request.POST.get('diag_service')
-        send_request_messagses('messagesSent','Diag')
+        send_request_messagses('sentMessages','Diag')
+        print(diag_messages_input)
         # return redirect("index")
         response_data = {'message':'Text input received successfully'}
-        return JsonResponse(response_data)
+        return HttpResponse(response_data)
     else:
-        return JsonResponse({'error':'INvalid request.'},status=400)
+        print("step in error")
+        return HttpResponse({'error':'INvalid request.'},status=400)
