@@ -22,6 +22,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-0(9%k_yo4j4r)f@)^qsn+9-f=!(9pugx5wm%2eyik(*iofxqu6'
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
