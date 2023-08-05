@@ -125,7 +125,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+CSP_DEFAULT_SRC = ("'self'",)
+CSP_OPENER_POLICY = "same-origin"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
