@@ -1,11 +1,11 @@
 from hashlib import new
 from pathlib import Path
 import mimetypes
-
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.http import Http404, HttpResponse
-
+from django.http import Http404, HttpResponse,JsonResponse
+from .azure_messages_hndlr import send_request_messagses
 from .azure_file_controller import ALLOWED_EXTENTIONS, download_blob, upload_file_to_blob
 
 from . import models
@@ -55,3 +55,14 @@ def delete_file(request,file_id):
     file.deleted = 1
     file.save()
     return redirect("list_files")
+
+
+def get_diag_messages(request):
+    print("trigger")
+    if request.method == 'POST' and request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest': 
+        diag_messages_input = request.POST.get('diag_service')
+        send_request_messagses(diag_messages_input,'Diag')
+        response_data = {'message':'Text input received successfully'}
+        return JsonResponse(response_data)
+    else:
+        return JsonResponse({'error':'INvalid request.'},status=400)
