@@ -1,5 +1,4 @@
 import json
-import pandas as pd
 from azure.iot.device import IoTHubDeviceClient
 import sys
 from azure.iot.hub import IoTHubRegistryManager
