@@ -62,6 +62,7 @@ def get_diag_messages(request):
     if request.method == 'POST' and request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest': 
         diag_messages_input = request.POST.get('diag_service')
         send_request_messagses(diag_messages_input,'Diag')
+        return redirect("index")
     #     response_data = {'message':'Text input received successfully'}
     #     return HttpResponse(response_data)
     # else:
