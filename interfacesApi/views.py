@@ -59,9 +59,9 @@ def delete_file(request,file_id):
 
 def get_diag_messages(request):
     print("trigger")
-    if request.method == 'POST' and request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest': 
+    if request.method == 'POST: 
         diag_messages_input = request.POST.get('diag_service')
-        send_request_messagses(diag_messages_input,'Diag')
+        send_request_messagses('messagesSent','Diag')
         # return redirect("index")
         response_data = {'message':'Text input received successfully'}
         return JsonResponse(response_data)
