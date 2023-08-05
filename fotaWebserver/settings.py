@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #'django.middleware.CrossOriginOpenerPolicyMiddleware',
+    'fotaWebserver.custom_middleware.CrossOriginOpenerPolicyMiddleware',
 ]
 
 ROOT_URLCONF = 'fotaWebserver.urls'
@@ -125,8 +125,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-#CSP_DEFAULT_SRC = ("'self'",)
-#CSP_OPENER_POLICY = "same-origin"
+CSP_DEFAULT_SRC = ("'self'",)
+CSP_OPENER_POLICY = "same-origin"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
