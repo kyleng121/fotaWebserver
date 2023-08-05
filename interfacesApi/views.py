@@ -61,7 +61,7 @@ def get_diag_messages(request):
     print("trigger")
     if request.method == 'POST': 
         print("step in Post")
-        diag_messages_input = request.POST.get('diag_service')
+        # diag_messages_input = request.POST.get('diag_service')
         send_request_messagses('sentMessages','Diag')
         print(diag_messages_input)
         # return redirect("index")
