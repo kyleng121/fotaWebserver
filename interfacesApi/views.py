@@ -63,6 +63,6 @@ def get_diag_messages(request):
         diag_messages_input = request.POST.get('diag_service')
         send_request_messagses(diag_messages_input,'Diag')
         response_data = {'message':'Text input received successfully'}
-        return JsonResponse(response_data)
+        return HttpResponse(response_data)
     else:
-        return JsonResponse({'error':'INvalid request.'},status=400)
+        return HttpResponse({'error':'INvalid request.'},status=400)
