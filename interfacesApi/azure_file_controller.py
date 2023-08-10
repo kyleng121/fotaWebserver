@@ -12,9 +12,9 @@ from . import models
 
 ALLOWED_EXTENTIONS = ['.pdf','.doc','.docx','.bin','.zip']
 
-storage_account_key = "oK3VQsdBdLJviU19hHTZ/g47Fe/r/NMTH8JgMe8BiksVfxXlcLj8/1aXzRKT9Kpzs2NeqTHmq+OR+AStkZk9qQ=="
+storage_account_key = "79xt7Bov9aGr3UxCIO+CJ3nGDNfeZXSkV33E1bxOVgfzz787mMDXrrBS91Nvnd+WaoQSZb5PPVI1+AStRV5jzA=="
 storage_account_name = "fotafwstorage2"
-connection_string = "DefaultEndpointsProtocol=https;AccountName=fotafwstorage2;AccountKey=oK3VQsdBdLJviU19hHTZ/g47Fe/r/NMTH8JgMe8BiksVfxXlcLj8/1aXzRKT9Kpzs2NeqTHmq+OR+AStkZk9qQ==;EndpointSuffix=core.windows.net"
+connection_string = "DefaultEndpointsProtocol=https;AccountName=fotafwstorage2;AccountKey=79xt7Bov9aGr3UxCIO+CJ3nGDNfeZXSkV33E1bxOVgfzz787mMDXrrBS91Nvnd+WaoQSZb5PPVI1+AStRV5jzA==;EndpointSuffix=core.windows.net"
 container_name = "fwupload"
 
 def upload_to_blob_storage(file,file_name):
