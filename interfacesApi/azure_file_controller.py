@@ -12,10 +12,10 @@ from . import models
 
 ALLOWED_EXTENTIONS = ['.pdf','.doc','.docx','.bin','.zip']
 
-storage_account_key = "t+YV6VRqvmrnVPmzGSTRZf62074W0V7yHEiuJ26Q3KjiGDU/hMUX4Ewa9r2Ci3bDVQbRlQmY4zsw+AStXbt30Q=="
-storage_account_name = "fotafwstorage"
-connection_string = "DefaultEndpointsProtocol=https;AccountName=fotafwstorage;AccountKey=t+YV6VRqvmrnVPmzGSTRZf62074W0V7yHEiuJ26Q3KjiGDU/hMUX4Ewa9r2Ci3bDVQbRlQmY4zsw+AStXbt30Q==;EndpointSuffix=core.windows.net"
-container_name = "fwstore"
+storage_account_key = "oK3VQsdBdLJviU19hHTZ/g47Fe/r/NMTH8JgMe8BiksVfxXlcLj8/1aXzRKT9Kpzs2NeqTHmq+OR+AStkZk9qQ=="
+storage_account_name = "fotafwstorage2"
+connection_string = "DefaultEndpointsProtocol=https;AccountName=fotafwstorage2;AccountKey=oK3VQsdBdLJviU19hHTZ/g47Fe/r/NMTH8JgMe8BiksVfxXlcLj8/1aXzRKT9Kpzs2NeqTHmq+OR+AStkZk9qQ==;EndpointSuffix=core.windows.net"
+container_name = "fwupload"
 
 def upload_to_blob_storage(file,file_name):
     print("in upload function to blob")
