@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'fotaWebserver.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "fwsstorage",
-        "USER": "cong@fwsstorageserver",
-        "PASSWORD": "C123456789*",
-        "HOST": "fwsstorageserver.postgres.database.azure.com",
+        "NAME": "fwdb",
+        "USER": "cong@fotadbserver",
+        "PASSWORD": "C123456#",
+        "HOST": "fotadbserver.postgres.database.azure.com",
         "PORT": "5432",
         "OPTIONS":{
             "sslmode":"require"
