@@ -86,7 +86,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "fwdb",
         "USER": "cong@fotadbserver",
-        "PASSWORD": "C123456#",
+        "PASSWORD": "C123456789#",
         "HOST": "fotadbserver.postgres.database.azure.com",
         "PORT": "5432",
         "OPTIONS":{
