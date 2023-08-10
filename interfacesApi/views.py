@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import Http404, HttpResponse,JsonResponse
 from .azure_messages_hndlr import send_request_messagses
-from .azure_file_controller import ALLOWED_EXTENTIONS, download_blob, upload_file_to_blob
+from .azure_file_controller import ALLOWED_EXTENTIONS,  upload_file_to_blob
 
 from . import models
 
