@@ -2,8 +2,8 @@ import json
 import sys
 from azure.iot.hub import IoTHubRegistryManager
 
-CONNECTION_STRING = "HostName=FotaWebserver.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=WEfT/T/BkiYCv1DiOPT0zm8vbuAHdIX/Ppo7zUd1V4E="
-DEVICE_ID = "raspberry4"
+CONNECTION_STRING = "HostName=fotadevices.azure-devices.net;DeviceId=fotamaster;SharedAccessKey=RbmlOfiXgz6tuW4IxERLsMmviJYu+AIzVPG6gP0v1qQ="
+DEVICE_ID = "fotamaster"
 
 def send_request_messagses(data,messageType):
     try:
