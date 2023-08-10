@@ -133,7 +133,7 @@ CSP_OPENER_POLICY = "same-origin"
 
 STATIC_URL = 'static/'
 
-CSRF_TRUSTED_ORIGINS=['https://fotaserver.azurewebsites.net/*']
+CSRF_TRUSTED_ORIGINS=['https://ffotawebserver.azurewebsites.net/*']
 
 SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
