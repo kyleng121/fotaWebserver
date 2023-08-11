@@ -35,26 +35,26 @@ def list_files(request):
     context = {"files": files}
     return render(request, "interfacesApi/list_files.html", context=context)
 
-def download_file(request, file_id):
-    file = models.File.objects.get(pk=file_id)
-    file_name = file.file_name
-    file_type, _ = mimetypes.guess_type(file_name)
-    url = file.file_url
-    blob_name = url.split("/")[-1]
-    blob_content = download_blob(blob_name)
-    if blob_content:
-        response = HttpResponse(blob_content.readall(), content_type=file_type)
-        response['Content-Disposition'] = f'attachment; filename={file_name}'
-        messages.success(request, f"{file_name} was successfully downloaded")
-        return response
-    return Http404
+# def download_file(request, file_id):
+#     file = models.File.objects.get(pk=file_id)
+#     file_name = file.file_name
+#     file_type, _ = mimetypes.guess_type(file_name)
+#     url = file.file_url
+#     blob_name = url.split("/")[-1]
+#     blob_content = download_blob(blob_name)
+#     if blob_content:
+#         response = HttpResponse(blob_content.readall(), content_type=file_type)
+#         response['Content-Disposition'] = f'attachment; filename={file_name}'
+#         messages.success(request, f"{file_name} was successfully downloaded")
+#         return response
+#     return Http404
 
 
-def delete_file(request,file_id):
-    file = models.File.objects.get(pk=file_id)
-    file.deleted = 1
-    file.save()
-    return redirect("list_files")
+# def delete_file(request,file_id):
+#     file = models.File.objects.get(pk=file_id)
+#     file.deleted = 1
+#     file.save()
+#     return redirect("list_files")
 
 
 def get_diag_messages(request):
