@@ -2,7 +2,7 @@ import json
 import sys
 from azure.iot.hub import IoTHubRegistryManager
 
-CONNECTION_STRING = "HostName=fotadevices.azure-devices.net;DeviceId=fotamaster;SharedAccessKey=qIcN60lu7r/F8kP3Uk+sferBF5l6Xa81w9bFaBiR2+o="
+CONNECTION_STRING = "HostName=fotadevices.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=rUYh1yPGbG7duLPE/m1QFxNLii2PP5GvbYhKfOQG6KE="
 DEVICE_ID = "fotamaster"
 
 def send_request_messagses(data,messageType):
