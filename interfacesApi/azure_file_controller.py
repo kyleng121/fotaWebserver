@@ -77,9 +77,9 @@ def upload_file_to_blob(file):
     file_name = f"{file_prefix}"
     file_content = file.read()
     file_io = BytesIO(file_content)
-    upload_to_blob_storage(file_io,file_name)
+    file_object = upload_to_blob_storage(file_io,file_name)
     print("end of line")
     # blob_client.upload_blob(data=file_io)
     # file_object = save_file_url_to_db(blob_client.url)
 
-    # return file_object
+    return file_object
