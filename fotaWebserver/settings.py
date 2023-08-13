@@ -80,7 +80,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'fotaWebserver.wsgi.application'
-
+ASGI_APPLICATION = 'fotaWebserver.routing.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
