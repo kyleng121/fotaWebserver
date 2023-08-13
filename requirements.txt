@@ -16,5 +16,4 @@ azure-storage-blob==12.9.0
 django-environ==0.8.1
 azure-iot-hub==2.6.1
 channels channels-redis
-websockets
 
