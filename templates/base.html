@@ -50,4 +50,13 @@
 
     ></script>
   </body>
+  <script>
+    var socket = new WebSocket('ws://' + window.location.host + '/ws/data/');
+
+    socket.onmessage = function(e) {
+        var data = JSON.parse(e.data);
+        console.log(data)
+        // Update your webpage UI with the received data
+    };
+  </script>
 </html>
