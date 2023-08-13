@@ -4,6 +4,7 @@ from channels.auth import AuthMiddlewareStack
 from django.urls import path
 from . import consumers  # Import consumers from your app
 
+
 application = ProtocolTypeRouter({
     'websocket': AuthMiddlewareStack(
         URLRouter([
