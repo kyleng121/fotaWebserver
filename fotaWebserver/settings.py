@@ -142,10 +142,10 @@ CSRF_TRUSTED_ORIGINS=['https://fotawebserver.azurewebsites.net/*']
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://fotawebserver.azurewebsites.net/*",
-    "171.253.185.74",
-    "171.253.7.74",
-    "27.71.108.183",
+    "https://fotawebserver.azurewebsites.net",
+    "https://171.253.185.74",
+    "https://171.253.7.74",
+    "https://27.71.108.183",
     # Add more origins as needed, e.g., "http://another-origin.com"
 ]
 
