@@ -7,6 +7,11 @@ from django.contrib import messages
 from django.http import Http404, HttpResponse,JsonResponse
 from .azure_messages_hndlr import send_request_messagses
 from .azure_file_controller import ALLOWED_EXTENTIONS,  upload_file_to_blob
+from rest_framework.response import Response
+from rest_framework.decorators import action
+from rest_framework import viewsets
+from .models import Messages
+from .serializers import messagesSerializer
 
 from . import models
 
@@ -70,3 +75,16 @@ def get_diag_messages(request):
     else:
         print("step in error")
         return HttpResponse({'error':'INvalid request.'},status=400)
+    
+
+class device_messages_hndlr(viewsets.ModelViewSet):
+    queryset = Messages.objects.all()
+    serializer_class = messagesSerializer
+
+    @action(detail=False, methods=['post'])
+    def receive_data(self, request):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=201)
+    
