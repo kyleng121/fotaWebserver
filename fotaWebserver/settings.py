@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'crispy_forms',
     'interfacesApi.apps.InterfacesapiConfig',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'interfacesApi.custom_middleware.CrossOriginOpenerPolicyMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'fotaWebserver.urls'
